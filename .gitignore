@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.log
+
+# Virtual environment
+venv/
+env/
+.venv/
+ENV/
+
+# Streamlit cache
+.streamlit/
+.streamlit_cache/
+
+# VS Code / IDE
+.vscode/
+.idea/
+
+# Jupyter / temp files
+.ipynb_checkpoints/
+*.sqlite3
+*.db
+
+# System / OS files
+.DS_Store
+Thumbs.db
+
+# Build / distribution
+build/
+dist/
+*.egg-info/
+
+# Images / media outputs
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.mp4
+
+# Other
+*.bak
+*.swp
