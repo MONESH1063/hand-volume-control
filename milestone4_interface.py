@@ -25,7 +25,7 @@ st.markdown(
     """
     <style>
     .title {text-align:center; font-size:28px; font-weight:700; color:#FF6A3D; margin-bottom:6px;}
-    .card {background:#fff; border-radius:10px; padding:12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);}
+    .card {background:#111827; color:#ffffff; border-radius:12px; padding:16px; box-shadow: 0 4px 12px rgba(0,0,0,0.4);  border:1px solid #1f2937;}
     .small-muted {color:#6b7280; font-size:13px;}
     </style>
     """,
@@ -105,7 +105,7 @@ def show_login():
         password = st.text_input("Password", type="password")
         submitted = st.form_submit_button("Login")
         if submitted:
-            if username == "admin" and password == "1234":
+            if username == "monesh" and password == "1234":
                 st.session_state.logged_in = True
                 st.success("✅ Login successful")
                 time.sleep(0.5)
@@ -219,7 +219,7 @@ def show_dashboard():
                 cv2.putText(frame, f"{int(vol_percent)}%", (10, 40),
                             cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0,255,0), 2)
 
-            camera_ph.image(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB), use_container_width=True)
+            camera_ph.image(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB), width=500)
 
             g_html = f"""
             <div class="card">
@@ -234,7 +234,7 @@ def show_dashboard():
             elapsed = time.time() - start_time
             fps = frame_count / elapsed if elapsed > 0 else 0
             perf_html = f"""
-            <div class="card">
+            <div class="card"> border:1px solid #1f2937;
             <b>🔊 Current Volume:</b> {int(vol_percent)}%<br>
             <b>📏 Finger Distance:</b> {int(distance)} px<br>
             <b>⚡ Response Time:</b> {elapsed:.2f} s<br>
