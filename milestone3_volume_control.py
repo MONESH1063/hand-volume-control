@@ -22,11 +22,11 @@ min_vol, max_vol = vol_range[0], vol_range[1]
 
 def classify_gesture(dist):
     if dist < 30:
-        return "Closed ✊"
+        return "closed ✊"
     elif dist < 80:
-        return "Pinch 🤏"
+        return "pinch 🤏"
     else:
-        return "Open 🖐"
+        return "open 🖐"
 
 with mp_hands.Hands(
     max_num_hands=1,
